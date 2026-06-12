@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your CV - Doctor Registration | Lencomedicale LK</title>
+    <meta name="description" content="Submit your CV and professional details to explore Australian medical opportunities. Secure, confidential, and free for doctors.">
+    <meta name="keywords" content="submit doctor CV Australia, overseas doctor registration, IMG CV submission, doctor recruitment form Australia">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="../index.html" class="logo">
+                <div class="logo-mark"><i class="fas fa-plus"></i></div>
+                <div class="logo-text">Lencomedicale <span>LK</span></div>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html">Home</a>
+                <a href="for-doctors.html">For Doctors</a>
+                <a href="for-medical-centres.html">For Medical Centres</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="submit-cv.html" class="btn btn-primary">Submit Your CV</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="section-badge">Submit Your CV</span>
+            <h1>Doctor CV Submission Form</h1>
+            <p>Complete the form below to submit your CV and professional details. Our team will review your profile and contact you if suitable opportunities are available.</p>
+        </div>
+    </section>
+
+    <!-- CV Form -->
+    <section class="section">
+        <div class="container">
+            <div class="container-sm">
+
+                <!-- Important Notice -->
+                <div class="notice" style="margin-bottom: var(--space-8);">
+                    <p><strong><i class="fas fa-shield-alt"></i> Your Privacy Matters</strong></p>
+                    <p style="margin-top: var(--space-2); margin-bottom: 0;">All information you provide is stored securely and handled confidentially. Your CV will only be shared with medical centres after your explicit consent. You can request deletion of your data at any time.</p>
+                </div>
+
+                <!-- Form -->
+                <div id="cvFormCard">
+                    <form id="cvSubmissionForm">
+
+                        <!-- Section: Personal Details -->
+                        <div class="form-card">
+                            <h5 class="form-section-title"><i class="fas fa-user"></i> Personal Details</h5>
+                            <div class="form-grid">
+                                <div class="form-group" style="grid-column: span 2;">
+                                    <label class="form-label">Full Name <span class="required">*</span></label>
+                                    <input type="text" class="form-input" name="fullName" required placeholder="Dr. First Last">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email Address <span class="required">*</span></label>
+                                    <input type="email" class="form-input" name="email" required placeholder="you@email.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone / WhatsApp Number <span class="required">*</span></label>
+                                    <input type="tel" class="form-input" name="phone" required placeholder="+94 7X XXX XXXX or +61 4XX XXX XXX">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Current Country <span class="required">*</span></label>
+                                    <input type="text" class="form-input" name="currentCountry" required placeholder="e.g. Sri Lanka, India, UK">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Are you currently in Australia? <span class="required">*</span></label>
+                                    <select class="form-select" name="inAustralia" required>
+                                        <option value="">Select</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+                                <div class="form-group" style="grid-column: span 2;">
+                                    <label class="form-label">LinkedIn Profile URL <span style="color: var(--gray-400);">(optional)</span></label>
+                                    <input type="url" class="form-input" name="linkedin" placeholder="https://linkedin.com/in/your-profile">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section: Professional Details -->
+                        <div class="form-card">
+                            <h5 class="form-section-title"><i class="fas fa-briefcase-medical"></i> Professional Details</h5>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Medical Qualification <span class="required">*</span></label>
+                                    <input type="text" class="form-input" name="qualification" required placeholder="e.g. MBBS, MD, MRCP">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Country of Qualification <span class="required">*</span></label>
+                                    <input type="text" class="form-input" name="qualificationCountry" required placeholder="e.g. Sri Lanka">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Year of Graduation <span class="required">*</span></label>
+                                    <input type="number" class="form-input" name="graduationYear" required min="1970" max="2025" placeholder="e.g. 2015">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Current Role <span class="required">*</span></label>
+                                    <input type="text" class="form-input" name="currentRole" required placeholder="e.g. Registrar, Consultant, GP">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Specialty / Area of Interest <span class="required">*</span></label>
+                                    <input type="text" class="form-input" name="specialty" required placeholder="e.g. General Practice, Psychiatry, Surgery">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Years of Experience <span class="required">*</span></label>
+                                    <select class="form-select" name="experience" required>
+                                        <option value="">Select</option>
+                                        <option value="1-2">1-2 years</option>
+                                        <option value="3-5">3-5 years</option>
+                                        <option value="5-10">5-10 years</option>
+                                        <option value="10-15">10-15 years</option>
+                                        <option value="15+">15+ years</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Preferred Role Type <span class="required">*</span></label>
+                                    <select class="form-select" name="roleType" required>
+                                        <option value="">Select</option>
+                                        <option value="permanent">Permanent</option>
+                                        <option value="locum">Locum</option>
+                                        <option value="part-time">Part-time</option>
+                                        <option value="full-time">Full-time</option>
+                                        <option value="open">Open to discuss</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Current Registration Status <span class="required">*</span></label>
+                                    <select class="form-select" name="registrationStatus" required>
+                                        <option value="">Select</option>
+                                        <option value="ahpra-registered">AHPRA Registered</option>
+                                        <option value="amc-started">AMC Pathway Started</option>
+                                        <option value="amc-completed">AMC Exams Completed</option>
+                                        <option value="specialist-pathway">Specialist Pathway</option>
+                                        <option value="not-started">Not Started Yet</option>
+                                        <option value="not-sure">Not Sure</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">English Test Status <span style="color: var(--gray-400);">(optional)</span></label>
+                                    <select class="form-select" name="englishTest">
+                                        <option value="">Select</option>
+                                        <option value="ielts-completed">IELTS Completed</option>
+                                        <option value="oet-completed">OET Completed</option>
+                                        <option value="not-completed">Not Completed</option>
+                                        <option value="not-applicable">Not Applicable</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Visa Status <span style="color: var(--gray-400);">(optional)</span></label>
+                                    <input type="text" class="form-input" name="visaStatus" placeholder="e.g. Subclass 482, PR, Citizen, Planning to apply">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Availability to Start <span class="required">*</span></label>
+                                    <select class="form-select" name="availability" required>
+                                        <option value="">Select</option>
+                                        <option value="immediately">Immediately</option>
+                                        <option value="1-month">Within 1 month</option>
+                                        <option value="3-months">Within 3 months</option>
+                                        <option value="6-months">Within 6 months</option>
+                                        <option value="12-months">Within 12 months</option>
+                                        <option value="flexible">Flexible / Not sure yet</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Section: Document Upload -->
+                        <div class="form-card">
+                            <h5 class="form-section-title"><i class="fas fa-file-upload"></i> Document Upload</h5>
+                            <div class="form-group">
+                                <label class="form-label">Upload CV / Resume <span class="required">*</span></label>
+                                <div class="form-file">
+                                    <input type="file" name="cvFile" accept=".pdf,.doc,.docx" required>
+                                </div>
+                                <small style="color: var(--gray-500); margin-top: var(--space-2); display: block;">Accepted formats: PDF, DOC, DOCX. Max size: 5MB.</small>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Upload Cover Letter <span style="color: var(--gray-400);">(optional)</span></label>
+                                <div class="form-file">
+                                    <input type="file" name="coverLetter" accept=".pdf,.doc,.docx">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Upload Certificates <span style="color: var(--gray-400);">(optional)</span></label>
+                                <div class="form-file">
+                                    <input type="file" name="certificates" accept=".pdf,.doc,.docx,.jpg,.png" multiple>
+                                </div>
+                                <small style="color: var(--gray-500); margin-top: var(--space-2); display: block;">You can select multiple files. Accepted: PDF, DOC, DOCX, JPG, PNG.</small>
+                            </div>
+                        </div>
+
+                        <!-- Section: Consent -->
+                        <div class="form-card">
+                            <h5 class="form-section-title"><i class="fas fa-check-double"></i> Consent &amp; Agreement</h5>
+                            <p style="font-size: var(--text-sm); color: var(--gray-500); margin-bottom: var(--space-5);">Please read and agree to the following before submitting your application:</p>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="consent1" name="consent1" required>
+                                <label for="consent1">I confirm the information I provide is true and accurate.</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="consent2" name="consent2" required>
+                                <label for="consent2">I consent to Lencomedicale LK storing my details for recruitment and candidate-matching purposes.</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="consent3" name="consent3" required>
+                                <label for="consent3">I consent to Lencomedicale LK contacting me about suitable opportunities.</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="consent4" name="consent4" required>
+                                <label for="consent4">I understand my CV will only be shared with medical centres or healthcare providers after my consent or as part of the recruitment matching process explained on this website.</label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="consent5" name="consent5" required>
+                                <label for="consent5">I have read and agree to the <a href="privacy-policy.html" style="color: var(--teal); text-decoration: underline;">Privacy Policy</a>.</label>
+                            </div>
+                        </div>
+
+                        <!-- Disclaimer -->
+                        <div class="notice notice-warning" style="margin-bottom: var(--space-6);">
+                            <p><strong><i class="fas fa-exclamation-triangle"></i> Important:</strong> We are not a migration agent, legal advisor, or medical registration authority. Submitting your CV does not guarantee job placement. Doctors must independently verify their eligibility, registration pathway, and visa requirements with relevant Australian authorities.</p>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i> Submit Your CV
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- Success Message -->
+                <div class="success-message" id="cvSuccess">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Thank You for Submitting Your CV</h3>
+                    <p>Our team will review your profile and contact you if suitable opportunities are available. You will also receive a confirmation email shortly.</p>
+                    <p style="font-size: var(--text-sm); color: var(--gray-400); margin-top: var(--space-4);">Reference number will be sent to your email address.</p>
+                    <a href="../index.html" class="btn btn-outline mt-8">Return to Home</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-mark"><i class="fas fa-plus"></i></div>
+                        <div class="logo-text" style="color: var(--white);">Lencomedicale <span>LK</span></div>
+                    </a>
+                    <p>Connecting international doctors with Australian medical opportunities. Professional, confidential, and supportive recruitment matching.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>For Doctors</h4>
+                    <ul>
+                        <li><a href="for-doctors.html">Doctor Information</a></li>
+                        <li><a href="submit-cv.html">Submit Your CV</a></li>
+                        <li><a href="how-it-works.html">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="for-medical-centres.html">For Medical Centres</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms &amp; Consent</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i><span>info@lencomedicale.lk</span></li>
+                        <li><i class="fab fa-whatsapp"></i><span>+94 77 123 4567</span></li>
+                        <li><i class="fas fa-clock"></i><span>Mon-Fri: 9am - 6pm AEST</span></li>
+                    </ul>
+                    <div class="footer-social" style="margin-top: var(--space-5);">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lencomedicale LK. All rights reserved.</p>
+                <div>
+                    <a href="privacy-policy.html" style="color: rgba(255,255,255,0.5); margin-right: var(--space-4);">Privacy</a>
+                    <a href="terms.html" style="color: rgba(255,255,255,0.5);">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,39 +1,46 @@
-// ===== Mobile Navigation Toggle =====
+/**
+ * Lencomedicale LK - Main JavaScript
+ * Handles navigation, form submissions, animations, and localStorage data management
+ */
+
+// ===== Mobile Navigation =====
 const mobileToggle = document.getElementById('mobileToggle');
 const navLinks = document.getElementById('navLinks');
 
 if (mobileToggle) {
     mobileToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        mobileToggle.classList.toggle('active');
+    });
+    // Close on link click
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('active'));
     });
 }
 
-// Close mobile menu on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navLinks) navLinks.classList.remove('active');
-        if (mobileToggle) mobileToggle.classList.remove('active');
+// ===== Header Scroll Effect =====
+const header = document.getElementById('header');
+if (header) {
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+}
+
+// ===== Smooth Scroll =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
     });
 });
 
-// ===== Header Scroll Effect =====
-const header = document.getElementById('header');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
-
 // ===== Scroll Animations =====
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
+const observerOpts = { threshold: 0.1, rootMargin: '0px 0px -40px 0px' };
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -41,119 +48,111 @@ const observer = new IntersectionObserver((entries) => {
             observer.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, observerOpts);
 
-// Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll(
-        '.step-card, .feature-card, .visual-card, .exam-card, .contact-info-card, .specialty-tag'
-    );
-    
-    animateElements.forEach((el, index) => {
+    document.querySelectorAll('.card, .step, .form-card, .contact-info-card').forEach((el, i) => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = `all 0.5s ease ${index * 0.08}s`;
+        el.style.transform = 'translateY(16px)';
+        el.style.transition = `opacity 0.4s ease ${i * 0.06}s, transform 0.4s ease ${i * 0.06}s`;
         observer.observe(el);
     });
 });
 
-// ===== Smooth Scroll for anchor links =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-            e.preventDefault();
-            const target = document.querySelector(href);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+// ===== Data Storage Helpers =====
+const DB = {
+    get(key) {
+        try { return JSON.parse(localStorage.getItem(key)) || []; }
+        catch { return []; }
+    },
+    set(key, data) {
+        localStorage.setItem(key, JSON.stringify(data));
+    },
+    add(key, entry) {
+        const data = this.get(key);
+        entry.id = Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
+        entry.submittedAt = new Date().toISOString();
+        entry.status = 'new';
+        entry.notes = '';
+        data.unshift(entry);
+        this.set(key, data);
+        return entry;
+    }
+};
+
+// ===== CV Submission Form =====
+const cvForm = document.getElementById('cvSubmissionForm');
+if (cvForm) {
+    cvForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Validate all required checkboxes
+        const checkboxes = this.querySelectorAll('input[type="checkbox"][required]');
+        let allChecked = true;
+        checkboxes.forEach(cb => {
+            if (!cb.checked) { allChecked = false; cb.parentElement.style.color = 'var(--error)'; }
+            else { cb.parentElement.style.color = ''; }
+        });
+        if (!allChecked) { alert('Please agree to all consent checkboxes before submitting.'); return; }
+
+        // Collect form data
+        const formData = new FormData(this);
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+            if (key === 'cvFile' || key === 'coverLetter' || key === 'certificates') {
+                // Store file name only (actual file storage would require backend)
+                if (value && value.name) data[key] = value.name;
+            } else {
+                data[key] = value;
             }
         }
+
+        // Save to localStorage
+        DB.add('doctor_submissions', data);
+
+        // Show success
+        document.getElementById('cvFormCard').style.display = 'none';
+        document.getElementById('cvSuccess').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-});
+}
 
-// ===== Contact Form Handler =====
+// ===== Medical Centre Inquiry Form =====
+const centreForm = document.getElementById('centreInquiryForm');
+if (centreForm) {
+    centreForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
+        }
+
+        DB.add('centre_enquiries', data);
+
+        document.getElementById('centreFormCard').style.display = 'none';
+        document.getElementById('centreSuccess').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+// ===== Contact Form =====
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Simple validation
-        let isValid = true;
-        const requiredFields = this.querySelectorAll('[required]');
-        
-        requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-                isValid = false;
-                field.style.borderColor = 'var(--error)';
-            } else {
-                field.style.borderColor = 'var(--border-color)';
-            }
-        });
-        
-        if (isValid) {
-            // Show success message
-            const submitBtn = this.querySelector('.form-submit .btn');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-            submitBtn.style.background = 'var(--success)';
-            submitBtn.style.borderColor = 'var(--success)';
-            
-            // Reset after 3 seconds
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                submitBtn.style.borderColor = '';
-                this.reset();
-            }, 3000);
+
+        const formData = new FormData(this);
+        const data = {};
+        for (let [key, value] of formData.entries()) {
+            data[key] = value;
         }
-    });
-}
 
-// ===== Counter Animation =====
-function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number');
-    
-    counters.forEach(counter => {
-        const text = counter.textContent;
-        const match = text.match(/(\d[\d,]*)/);
-        if (!match) return;
-        
-        const number = parseInt(match[1].replace(/,/g, ''));
-        const suffix = text.replace(match[1], '').trim();
-        const prefix = text.indexOf(match[1]) > 0 ? text.substring(0, text.indexOf(match[1])) : '';
-        
-        if (isNaN(number)) return;
-        
-        let current = 0;
-        const increment = number / 40;
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= number) {
-                counter.textContent = text;
-                clearInterval(timer);
-            } else {
-                const formatted = Math.floor(current).toLocaleString();
-                counter.textContent = prefix + formatted + suffix;
-            }
-        }, 30);
-    });
-}
+        DB.add('contact_messages', data);
 
-// Run counter animation when stats are visible
-const statsSection = document.querySelector('.hero-stats');
-if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounters();
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    statsObserver.observe(statsSection);
+        document.getElementById('contactFormCard').style.display = 'none';
+        document.getElementById('contactSuccess').classList.add('show');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 }
