@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Lencomedicale LK</title>
+    <meta name="description" content="Get in touch with Lencomedicale LK for medical equipment inquiries, service requests, and healthcare solutions.">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../index.html" class="logo">
+                    <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+                    <span class="logo-text">Lencomedicale <span class="logo-accent">LK</span></span>
+                </a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary nav-cta">Get in Touch</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact <span class="text-gradient">Us</span></h1>
+            <p>Have a question or need a quote? We'd love to hear from you. Our team is ready to help with all your healthcare needs.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-cards">
+                    <div class="contact-info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Our Office</h4>
+                            <p>No. 123, Hospital Road,<br>Colombo 07, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+94 11 234 5678<br>+94 77 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@lencomedicale.lk<br>sales@lencomedicale.lk</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:30 AM - 5:30 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-headset"></i>
+                        <div>
+                            <h4>Technical Support</h4>
+                            <p>24/7 Emergency Support<br>+94 77 999 8888</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+94 XX XXX XXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="organization">Organization</label>
+                                <input type="text" id="organization" name="organization" placeholder="Hospital / Clinic name">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="equipment">Equipment Inquiry</option>
+                                    <option value="quote">Request a Quote</option>
+                                    <option value="service">Service Request</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary btn-lg">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Find Us</span>
+                <h2>Our Location</h2>
+            </div>
+            <div class="map-placeholder">
+                <i class="fas fa-map-marked-alt"></i>
+                <p>Colombo 07, Sri Lanka</p>
+                <a href="https://maps.google.com/?q=Colombo+07+Sri+Lanka" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-directions"></i> Get Directions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <div class="logo-icon"><i class="fas fa-heartbeat"></i></div>
+                        <span class="logo-text">Lencomedicale <span class="logo-accent">LK</span></span>
+                    </a>
+                    <p>Your trusted partner for quality medical equipment and healthcare solutions in Sri Lanka.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Medical Equipment</a></li>
+                        <li><a href="services.html">Lab Solutions</a></li>
+                        <li><a href="services.html">Pharmaceuticals</a></li>
+                        <li><a href="services.html">Maintenance</a></li>
+                        <li><a href="services.html">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i><span>No. 123, Hospital Road,<br>Colombo 07, Sri Lanka</span></li>
+                        <li><i class="fas fa-phone"></i><span>+94 11 234 5678</span></li>
+                        <li><i class="fas fa-envelope"></i><span>info@lencomedicale.lk</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Lencomedicale LK. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
