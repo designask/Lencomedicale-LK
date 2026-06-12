@@ -1,40 +1,43 @@
 # Lencomedicale LK
 
-Professional website for Lencomedicale LK - Quality Medical Solutions in Sri Lanka.
+Professional website for Lencomedicale LK — connecting verified Sri Lankan medical specialists with Australian healthcare facilities.
 
 ## About
 
-Lencomedicale LK is a leading healthcare solutions provider in Sri Lanka, specializing in medical equipment supply, laboratory solutions, pharmaceutical distribution, and technical support services.
+Lencomedicale LK is a specialist medical recruitment service that matches Sri Lankan doctors with healthcare vacancies across all 8 Australian states. We provide an admin-managed, end-to-end service from first contact to placement.
 
 ## Pages
 
-- **Home** - Company overview, services, and key statistics
-- **About** - Company story, mission, vision, values, and team
-- **Services** - Detailed service offerings (9 services)
-- **Products** - Product catalog with category filtering
+- **Home** - Hero with specialist matching message, how it works, for doctors section, specialties, testimonial
+- **For Doctors** - Registration benefits, process, eligibility criteria
+- **For Employers** - Vacancy submission, process, track record stats
+- **Exam Guidance** - AMC, RACP, RACS, RANZCP and other exam preparation support
 - **Contact** - Contact form and office information
 
 ## Tech Stack
 
-- Pure HTML5, CSS3, JavaScript
-- Responsive design (mobile-first)
+- Pure HTML5, CSS3, JavaScript (no build step required)
+- Dark theme with blue accent color
+- Fully responsive (mobile-first)
 - CSS Custom Properties for theming
 - Font Awesome icons
 - Google Fonts (Inter)
 
 ## Deployment
 
-This site is designed for GitHub Pages deployment. Enable GitHub Pages in repository settings pointing to the `main` branch root.
+This site is designed for GitHub Pages. Enable GitHub Pages in repository settings pointing to the `main` branch root.
 
 **Live URL:** `https://designask.github.io/lencomedicale-lk/`
 
 ## Color Theme
 
-Professional blue color palette:
-- Primary: `#2563eb`
-- Primary Dark: `#1d4ed8`
-- Primary Light: `#3b82f6`
+Dark theme with blue accent:
+- Background: `#0A0F1C`
+- Card Background: `#141B2E`
+- Accent (Blue): `#4A9EFF`
+- Text Primary: `#FFFFFF`
+- Text Secondary: `#A0AEC0`
 
 ## License
 
-All rights reserved - Lencomedicale LK
+All rights reserved — Lencomedicale LK

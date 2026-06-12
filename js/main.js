@@ -12,8 +12,8 @@ if (mobileToggle) {
 // Close mobile menu on link click
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        mobileToggle.classList.remove('active');
+        if (navLinks) navLinks.classList.remove('active');
+        if (mobileToggle) mobileToggle.classList.remove('active');
     });
 });
 
@@ -46,13 +46,13 @@ const observer = new IntersectionObserver((entries) => {
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
     const animateElements = document.querySelectorAll(
-        '.service-card, .hero-card, .partner-card, .why-card, .value-card, .team-card, .product-card, .contact-info-card'
+        '.step-card, .feature-card, .visual-card, .exam-card, .contact-info-card, .specialty-tag'
     );
     
     animateElements.forEach((el, index) => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
-        el.style.transition = `all 0.5s ease ${index * 0.1}s`;
+        el.style.transition = `all 0.5s ease ${index * 0.08}s`;
         observer.observe(el);
     });
 });
@@ -81,10 +81,6 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
         // Simple validation
         let isValid = true;
         const requiredFields = this.querySelectorAll('[required]');
@@ -94,7 +90,7 @@ if (contactForm) {
                 isValid = false;
                 field.style.borderColor = 'var(--error)';
             } else {
-                field.style.borderColor = 'var(--gray-200)';
+                field.style.borderColor = 'var(--border-color)';
             }
         });
         
@@ -117,56 +113,31 @@ if (contactForm) {
     });
 }
 
-// ===== Product Filter (Products page) =====
-const filterBtns = document.querySelectorAll('.filter-btn');
-const productCards = document.querySelectorAll('.product-card');
-
-if (filterBtns.length > 0) {
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const filter = btn.getAttribute('data-filter');
-            
-            productCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                    card.style.display = 'block';
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                } else {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                        card.style.display = 'none';
-                    }, 300);
-                }
-            });
-        });
-    });
-}
-
 // ===== Counter Animation =====
 function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number, .why-card-number');
+    const counters = document.querySelectorAll('.stat-number');
     
     counters.forEach(counter => {
         const text = counter.textContent;
-        const number = parseInt(text);
-        const suffix = text.replace(/[0-9]/g, '');
+        const match = text.match(/(\d[\d,]*)/);
+        if (!match) return;
+        
+        const number = parseInt(match[1].replace(/,/g, ''));
+        const suffix = text.replace(match[1], '').trim();
+        const prefix = text.indexOf(match[1]) > 0 ? text.substring(0, text.indexOf(match[1])) : '';
         
         if (isNaN(number)) return;
         
         let current = 0;
-        const increment = number / 50;
+        const increment = number / 40;
         const timer = setInterval(() => {
             current += increment;
             if (current >= number) {
                 counter.textContent = text;
                 clearInterval(timer);
             } else {
-                counter.textContent = Math.floor(current) + suffix;
+                const formatted = Math.floor(current).toLocaleString();
+                counter.textContent = prefix + formatted + suffix;
             }
         }, 30);
     });

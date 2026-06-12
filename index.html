@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lencomedicale LK - Quality Medical Solutions in Sri Lanka</title>
-    <meta name="description" content="Lencomedicale LK - Your trusted partner for quality medical equipment, pharmaceutical supplies, and healthcare solutions in Sri Lanka.">
+    <title>Lencomedicale LK - Find Medical Specialists for Australian Healthcare Facilities</title>
+    <meta name="description" content="Lencomedicale LK connects verified Sri Lankan medical specialists with Australian healthcare facilities. We handle the matching from first contact to offer.">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -18,18 +18,20 @@
             <nav class="nav">
                 <a href="index.html" class="logo">
                     <div class="logo-icon">
-                        <i class="fas fa-heartbeat"></i>
+                        <i class="fas fa-plus"></i>
                     </div>
                     <span class="logo-text">Lencomedicale <span class="logo-accent">LK</span></span>
                 </a>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="pages/about.html">About</a></li>
-                    <li><a href="pages/services.html">Services</a></li>
-                    <li><a href="pages/products.html">Products</a></li>
+                    <li><a href="pages/doctors.html">For Doctors</a></li>
+                    <li><a href="pages/employers.html" class="active">For Employers</a></li>
+                    <li><a href="pages/exam-guidance.html">Exam Guidance</a></li>
                     <li><a href="pages/contact.html">Contact</a></li>
                 </ul>
-                <a href="pages/contact.html" class="btn btn-primary nav-cta">Get in Touch</a>
+                <div class="nav-actions">
+                    <a href="pages/doctors.html" class="btn btn-secondary">Register as Doctor</a>
+                    <a href="pages/employers.html" class="btn btn-primary">Post a Vacancy</a>
+                </div>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -39,242 +41,188 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - For Employers -->
     <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-shape hero-shape-1"></div>
-            <div class="hero-shape hero-shape-2"></div>
-            <div class="hero-shape hero-shape-3"></div>
-        </div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <span class="hero-badge">
-                        <i class="fas fa-shield-alt"></i>
-                        Trusted Healthcare Partner
+                    <span class="hero-label">
+                        <span class="hero-label-line"></span>
+                        FOR AUSTRALIAN HEALTHCARE FACILITIES
                     </span>
-                    <h1>Quality Medical Solutions for <span class="text-gradient">Sri Lanka</span></h1>
-                    <p class="hero-description">We provide world-class medical equipment, pharmaceutical products, and healthcare solutions to hospitals, clinics, and healthcare providers across Sri Lanka.</p>
+                    <h1>Find a Specialist. We handle the <span class="text-accent">matching.</span></h1>
+                    <p class="hero-description">Tell us what role you need to fill. Our team matches your vacancy against our directory of verified Sri Lankan specialists and manages the introduction — from first contact to offer.</p>
                     <div class="hero-actions">
-                        <a href="pages/services.html" class="btn btn-primary btn-lg">
-                            Our Services
+                        <a href="pages/employers.html" class="btn btn-primary btn-lg">
+                            Submit a Vacancy Brief
                             <i class="fas fa-arrow-right"></i>
                         </a>
-                        <a href="pages/about.html" class="btn btn-outline btn-lg">
-                            Learn More
+                        <a href="#how-it-works" class="btn btn-outline btn-lg">
+                            How it works
                         </a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Products</span>
-                        </div>
-                        <div class="stat">
                             <span class="stat-number">200+</span>
-                            <span class="stat-label">Clients</span>
+                            <span class="stat-label">PARTNER FACILITIES</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Years</span>
+                            <span class="stat-number">1,400+</span>
+                            <span class="stat-label">LIVE VACANCIES FILLED</span>
                         </div>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-card">
-                        <div class="hero-card-icon">
-                            <i class="fas fa-hospital"></i>
+                        <div class="stat">
+                            <span class="stat-number">8/8</span>
+                            <span class="stat-label">STATES COVERED</span>
                         </div>
-                        <h3>Hospital Solutions</h3>
-                        <p>Complete medical infrastructure</p>
-                    </div>
-                    <div class="hero-card">
-                        <div class="hero-card-icon">
-                            <i class="fas fa-microscope"></i>
+                        <div class="stat">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">ADMIN-MANAGED — NO SELF-SERVICE FRICTION</span>
                         </div>
-                        <h3>Lab Equipment</h3>
-                        <p>Advanced diagnostic tools</p>
-                    </div>
-                    <div class="hero-card">
-                        <div class="hero-card-icon">
-                            <i class="fas fa-pills"></i>
-                        </div>
-                        <h3>Pharmaceuticals</h3>
-                        <p>Quality assured medicines</p>
-                    </div>
-                    <div class="hero-card">
-                        <div class="hero-card-icon">
-                            <i class="fas fa-stethoscope"></i>
-                        </div>
-                        <h3>Medical Devices</h3>
-                        <p>Cutting-edge technology</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Overview -->
-    <section class="section services-section">
+    <!-- How It Works -->
+    <section class="section how-section" id="how-it-works">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">What We Do</span>
-                <h2>Our Core Services</h2>
-                <p>Comprehensive healthcare solutions tailored for Sri Lankan medical institutions</p>
+                <span class="section-badge">How It Works</span>
+                <h2>Simple, Admin-Managed Process</h2>
+                <p>We handle everything so you can focus on patient care</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-truck-medical"></i>
-                    </div>
-                    <h3>Medical Equipment Supply</h3>
-                    <p>We supply state-of-the-art medical equipment from leading global manufacturers to hospitals and clinics across Sri Lanka.</p>
-                    <a href="pages/services.html" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Submit a Brief</h3>
+                    <p>Tell us about the vacancy — specialty, location, contract type, and start date.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-flask"></i>
-                    </div>
-                    <h3>Laboratory Solutions</h3>
-                    <p>Complete laboratory setup and maintenance services including diagnostic equipment, reagents, and consumables.</p>
-                    <a href="pages/services.html" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>We Match</h3>
+                    <p>Our team searches our verified directory and shortlists qualified specialists for your role.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-capsules"></i>
-                    </div>
-                    <h3>Pharmaceutical Distribution</h3>
-                    <p>Reliable distribution of quality pharmaceutical products meeting international standards and regulatory requirements.</p>
-                    <a href="pages/services.html" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Introduction</h3>
+                    <p>We manage the introduction, coordinate interviews, and handle all communications.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Maintenance & Support</h3>
-                    <p>Comprehensive after-sales service including equipment maintenance, calibration, and technical support.</p>
-                    <a href="pages/services.html" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Training & Education</h3>
-                    <p>Professional training programs for healthcare staff on equipment operation, safety protocols, and best practices.</p>
-                    <a href="pages/services.html" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3>Consulting Services</h3>
-                    <p>Expert consulting on healthcare infrastructure planning, procurement strategies, and compliance requirements.</p>
-                    <a href="pages/services.html" class="service-link">
-                        Learn more <i class="fas fa-arrow-right"></i>
-                    </a>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Placement</h3>
+                    <p>Once matched, we support the onboarding process from visa to first day on the job.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
-    <section class="section why-section">
+    <!-- For Doctors Section -->
+    <section class="section doctors-section">
         <div class="container">
-            <div class="why-grid">
-                <div class="why-content">
-                    <span class="section-badge">Why Lencomedicale LK</span>
-                    <h2>Your Trusted Healthcare Partner in Sri Lanka</h2>
-                    <p>With over 15 years of experience in the medical industry, we have built strong relationships with healthcare providers and global manufacturers to deliver the best solutions.</p>
-                    <ul class="why-list">
+            <div class="split-content">
+                <div class="split-text">
+                    <span class="section-badge">For Doctors</span>
+                    <h2>Take Your Career to <span class="text-accent">Australia</span></h2>
+                    <p>Register with us and gain access to exclusive specialist vacancies across all Australian states. We support you through exam preparation, registration, and placement.</p>
+                    <ul class="feature-list">
                         <li>
                             <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>ISO Certified Quality</strong>
-                                <p>All products meet international quality standards</p>
-                            </div>
+                            <span>Verified specialist vacancies across all 8 states</span>
                         </li>
                         <li>
                             <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>24/7 Technical Support</strong>
-                                <p>Round-the-clock assistance for critical equipment</p>
-                            </div>
+                            <span>Exam guidance and preparation support</span>
                         </li>
                         <li>
                             <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Island-wide Coverage</strong>
-                                <p>Serving healthcare institutions across all districts</p>
-                            </div>
+                            <span>Visa and registration assistance</span>
                         </li>
                         <li>
                             <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>NMRA Compliance</strong>
-                                <p>Fully compliant with National Medicines Regulatory Authority</p>
-                            </div>
+                            <span>Relocation and onboarding support</span>
                         </li>
                     </ul>
+                    <a href="pages/doctors.html" class="btn btn-primary btn-lg">
+                        Register as Doctor <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
-                <div class="why-visual">
-                    <div class="why-card why-card-1">
-                        <div class="why-card-number">15+</div>
-                        <div class="why-card-text">Years of Excellence</div>
+                <div class="split-visual">
+                    <div class="visual-card">
+                        <div class="visual-card-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>1,400+</h4>
+                        <p>Vacancies Filled</p>
                     </div>
-                    <div class="why-card why-card-2">
-                        <div class="why-card-number">200+</div>
-                        <div class="why-card-text">Healthcare Partners</div>
+                    <div class="visual-card">
+                        <div class="visual-card-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <h4>8/8</h4>
+                        <p>States Covered</p>
                     </div>
-                    <div class="why-card why-card-3">
-                        <div class="why-card-number">50+</div>
-                        <div class="why-card-text">Global Brands</div>
+                    <div class="visual-card">
+                        <div class="visual-card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Exam</h4>
+                        <p>Guidance Provided</p>
+                    </div>
+                    <div class="visual-card">
+                        <div class="visual-card-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>100%</h4>
+                        <p>Admin-Managed</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Partners / Brands -->
-    <section class="section partners-section">
+    <!-- Specialties -->
+    <section class="section specialties-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">Our Partners</span>
-                <h2>Trusted by Leading Healthcare Institutions</h2>
-                <p>We work with world-renowned manufacturers and serve top healthcare providers in Sri Lanka</p>
+                <span class="section-badge">Specialties</span>
+                <h2>We Recruit Across All Medical Specialties</h2>
+                <p>From general practice to highly specialized surgical roles</p>
             </div>
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <i class="fas fa-hospital"></i>
-                    <span>Government Hospitals</span>
-                </div>
-                <div class="partner-card">
-                    <i class="fas fa-clinic-medical"></i>
-                    <span>Private Clinics</span>
-                </div>
-                <div class="partner-card">
-                    <i class="fas fa-vials"></i>
-                    <span>Diagnostic Labs</span>
-                </div>
-                <div class="partner-card">
-                    <i class="fas fa-university"></i>
-                    <span>Medical Universities</span>
-                </div>
-                <div class="partner-card">
-                    <i class="fas fa-prescription-bottle-alt"></i>
-                    <span>Pharmacies</span>
-                </div>
-                <div class="partner-card">
-                    <i class="fas fa-briefcase-medical"></i>
-                    <span>Medical Centers</span>
+            <div class="specialties-grid">
+                <div class="specialty-tag">General Practice</div>
+                <div class="specialty-tag">Internal Medicine</div>
+                <div class="specialty-tag">Surgery</div>
+                <div class="specialty-tag">Anaesthetics</div>
+                <div class="specialty-tag">Psychiatry</div>
+                <div class="specialty-tag">Emergency Medicine</div>
+                <div class="specialty-tag">Obstetrics & Gynaecology</div>
+                <div class="specialty-tag">Paediatrics</div>
+                <div class="specialty-tag">Radiology</div>
+                <div class="specialty-tag">Pathology</div>
+                <div class="specialty-tag">Ophthalmology</div>
+                <div class="specialty-tag">Cardiology</div>
+                <div class="specialty-tag">Neurology</div>
+                <div class="specialty-tag">Orthopaedics</div>
+                <div class="specialty-tag">Dermatology</div>
+                <div class="specialty-tag">Oncology</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Trust -->
+    <section class="section trust-section">
+        <div class="container">
+            <div class="trust-content">
+                <div class="trust-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <blockquote>
+                        "Lencomedicale LK made the entire recruitment process seamless. Within weeks, we had a qualified specialist ready to join our team. Their admin-managed approach saved us countless hours."
+                    </blockquote>
+                    <div class="trust-author">
+                        <strong>Medical Director</strong>
+                        <span>Regional Hospital, Queensland</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -284,16 +232,16 @@
     <section class="section cta-section">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to Elevate Your Healthcare Facility?</h2>
-                <p>Contact us today to discuss your medical equipment needs and discover how we can help transform your healthcare delivery.</p>
+                <h2>Ready to Fill Your Next Vacancy?</h2>
+                <p>Submit a vacancy brief and let our team find the right specialist for your facility.</p>
                 <div class="cta-actions">
-                    <a href="pages/contact.html" class="btn btn-white btn-lg">
-                        Contact Us
+                    <a href="pages/employers.html" class="btn btn-primary btn-lg">
+                        Post a Vacancy
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="tel:+94112345678" class="btn btn-outline-white btn-lg">
-                        <i class="fas fa-phone"></i>
-                        +94 11 234 5678
+                    <a href="pages/contact.html" class="btn btn-outline btn-lg">
+                        <i class="fas fa-envelope"></i>
+                        Contact Us
                     </a>
                 </div>
             </div>
@@ -307,11 +255,11 @@
                 <div class="footer-brand">
                     <a href="index.html" class="logo">
                         <div class="logo-icon">
-                            <i class="fas fa-heartbeat"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                         <span class="logo-text">Lencomedicale <span class="logo-accent">LK</span></span>
                     </a>
-                    <p>Your trusted partner for quality medical equipment and healthcare solutions in Sri Lanka. Committed to improving healthcare delivery across the nation.</p>
+                    <p>Connecting verified Sri Lankan medical specialists with Australian healthcare facilities. We handle the matching — from first contact to offer.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
@@ -320,43 +268,37 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>For Doctors</h4>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/about.html">About Us</a></li>
-                        <li><a href="pages/services.html">Services</a></li>
-                        <li><a href="pages/products.html">Products</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
+                        <li><a href="pages/doctors.html">Register</a></li>
+                        <li><a href="pages/exam-guidance.html">Exam Guidance</a></li>
+                        <li><a href="pages/doctors.html">Browse Vacancies</a></li>
+                        <li><a href="pages/doctors.html">Visa Support</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Services</h4>
+                    <h4>For Employers</h4>
                     <ul>
-                        <li><a href="pages/services.html">Medical Equipment</a></li>
-                        <li><a href="pages/services.html">Lab Solutions</a></li>
-                        <li><a href="pages/services.html">Pharmaceuticals</a></li>
-                        <li><a href="pages/services.html">Maintenance</a></li>
-                        <li><a href="pages/services.html">Training</a></li>
+                        <li><a href="pages/employers.html">Post a Vacancy</a></li>
+                        <li><a href="pages/employers.html">How It Works</a></li>
+                        <li><a href="pages/employers.html">Pricing</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Contact Info</h4>
+                    <h4>Contact</h4>
                     <ul>
                         <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>No. 123, Hospital Road,<br>Colombo 07, Sri Lanka</span>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@lencomedicale.lk</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
                             <span>+94 11 234 5678</span>
                         </li>
                         <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>info@lencomedicale.lk</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-clock"></i>
-                            <span>Mon - Fri: 8:30 AM - 5:30 PM</span>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Colombo, Sri Lanka</span>
                         </li>
                     </ul>
                 </div>
